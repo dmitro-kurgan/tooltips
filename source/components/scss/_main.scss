@@ -2,24 +2,16 @@ body {
 	font-weight: 400;
 	font-family: $font;
 	font-style: normal;
-}
-a {
-	text-decoration: none;
-	color: #000;
-}
-.wrapper {
 	background-color: #e0e0e0;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
 }
-.tooltip-block {
+.tooltips-block {
 	align-self: flex-start;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 625px;
-	margin-top: 29px;
+	margin: auto;
+	padding-top: 29px;
 }
 .tooltip {
 	background-color: #fff;
@@ -40,16 +32,16 @@ a {
 	}
 	&--right {
 		&:before {
-			left: 100%;
+			left: calc(100% - 6px);
 			top: 25px;
-			border-top: 12px solid transparent;
-			border-bottom: 12px solid transparent; 
-			border-right: none;
-			border-left: 12px solid #444444;
+			@include addPrefix(transform, rotate(90deg));
 		}
 	}
 	&--inverse {
 		background-color: #444444;
+		&:before {
+			border-bottom: 12px solid #444;
+		}
 		.tooltip {
 			&__img {
 				background-color: #545454;
@@ -95,6 +87,7 @@ a {
 	&__age, &__location {
 		color: #888888;
 		font-size: 14px;
+		display: block;
 	}
 	&__bottom {
 		border-radius: 0px 0px 3px 3px;
@@ -107,12 +100,19 @@ a {
 	&__btn {
 		font-size: 14px;
 		height: 40px;
-		line-height: 40px;
+		line-height: 38px;
 		text-align: center;
 		display: inline-block;
+		border: none;
 		vertical-align: middle;
 		text-transform: uppercase;
 		border-radius: 3px;
+		&:hover {
+			cursor: pointer;
+		}
+		&:focus {
+			outline: none;
+		}
 		&--msg {
 			width: 107px;
 			color: #fff;

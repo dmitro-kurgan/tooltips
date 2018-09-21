@@ -5,31 +5,24 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="initial-scale=1.0, width=device-width, user-scalable=no")
 	body
-		.wrapper
-			.tooltip-block
-				.tooltip
-					.tooltip__main
-						.tooltip__img
-						.tooltip__info
-							.tooltip__name
-								p Username
-							.tooltip__age
-								p 25 years
-							.tooltip__location
-								p London, UK
-					.tooltip__bottom
-						a(href="#").tooltip__btn.tooltip__btn--msg Message
-						a(href="#").tooltip__btn.tooltip__btn--like Like photo
-				.tooltip.tooltip--inverse.tooltip--right
-					.tooltip__main
-						.tooltip__img
-						.tooltip__info
-							.tooltip__name
-								p Username
-							.tooltip__age
-								p 25 years
-							.tooltip__location
-								p London, UK
-					.tooltip__bottom
-						a(href="#").tooltip__btn.tooltip__btn--msg Message
-						a(href="#").tooltip__btn.tooltip__btn--like Like photo
+		.tooltips-block
+			.tooltip
+				.tooltip__main
+					.tooltip__img
+					.tooltip__info
+						h3.tooltip__name Username
+						span.tooltip__age 25 years
+						span.tooltip__location London, UK
+				.tooltip__bottom
+					button.tooltip__btn.tooltip__btn--msg Message
+					button.tooltip__btn.tooltip__btn--like Like photo
+			.tooltip.tooltip--inverse.tooltip--right
+				.tooltip__main
+					.tooltip__img
+					.tooltip__info
+						h3.tooltip__name Username
+						span.tooltip__age 25 years
+						span.tooltip__location London, UK
+				.tooltip__bottom
+					button.tooltip__btn.tooltip__btn--msg Message
+					button.tooltip__btn.tooltip__btn--like Like photo
